@@ -1,0 +1,45 @@
+.media-player {
+  border-block-start: 1px solid oklch(88.531% 0.0001 271.152);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.album-art {
+  inline-size: 4rem;
+  border-radius: 0.5rem;
+}
+
+.summary {
+  flex: 1;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.audio-name {
+  font-size: 1.25rem;
+  text-box: trim-both cap text;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.audio-author {
+  color: oklch(44.59% 0.00005 271.152);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.media-action {
+  background-color: oklch(21.779% 0.00002 271.152);
+  inline-size: 3rem;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  color: oklch(100% 0.00011 271.152);
+  cursor: pointer;
+}

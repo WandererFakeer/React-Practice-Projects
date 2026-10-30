@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-size: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wotfard", sans-serif;
+}
+
+body {
+  background-color: oklch(87.888% 0.07278 303.641);
+  block-size: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  inline-size: min(100% - 2rem, 400 / 16 * 1rem);
+  margin-inline: auto;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  margin-block-end: 1.5rem;
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+:where(input[type="text"], .submit-button) {
+  border: 1px solid oklch(52.78% 0.00006 271.152);
+  padding: clamp(0.5rem, 0.4746rem + 0.678vw, 1rem);
+  border-radius: 0.25rem;
+  outline-offset: 3px;
+  font-size: clamp(0.875rem, 0.8559rem + 0.5085vw, 1.25rem);
+  font-weight: 500;
+}
+
+input[type="text"] {
+  margin-inline-end: 0.5rem;
+  letter-spacing: 4px;
+}
+
+.submit-button {
+  cursor: pointer;
+}

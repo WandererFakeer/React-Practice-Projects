@@ -1,0 +1,11 @@
+.color-label {
+  font-size: 1.1rem;
+  font-weight: 450;
+}
+
+input[type="color"] {
+  inline-size: 5rem;
+  block-size: 5rem;
+  padding: 2px;
+  cursor: pointer;
+}

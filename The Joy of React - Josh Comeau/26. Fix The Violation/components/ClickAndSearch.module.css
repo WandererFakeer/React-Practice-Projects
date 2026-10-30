@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.search-action {
+  background-color: oklch(29.757% 0.03681 300.212);
+  inline-size: 4.25rem;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 100%;
+  outline-offset: 5px;
+  display: grid;
+  place-items: center;
+  color: oklch(1 0 0);
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-size: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wotfard", sans-serif;
+  word-break: break-all;
+}
+
+body {
+  background-color: oklch(24.859% 0.0283 290.28);
+  padding: 1rem;
+  display: grid;
+  justify-items: center;
+  color: oklch(100% 0.00011 271.152);
+}
+
+main {
+  inline-size: min(100% - 1rem, 500 / 16 * 1rem);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+dt {
+  justify-self: end;
+  color: oklch(78.465% 0.02694 292.954);
+}
+
+dd {
+  justify-self: start;
+  font-weight: 500;
+}

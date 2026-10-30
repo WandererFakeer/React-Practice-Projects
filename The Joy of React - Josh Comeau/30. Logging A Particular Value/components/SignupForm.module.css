@@ -1,0 +1,59 @@
+.signup-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "name name"
+    "email email"
+    "city city"
+    "postal postal"
+    "signup signup";
+  gap: 1.25rem 0.5rem;
+
+  @media (width >= 450px) {
+    grid-template-areas:
+      "name name"
+      "email email"
+      "city postal"
+      "signup signup";
+  }
+}
+
+.field-wrapper {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.name {
+  grid-area: name;
+}
+
+.email {
+  grid-area: email;
+}
+
+.city {
+  grid-area: city;
+}
+
+.postal {
+  grid-area: postal;
+}
+
+input[type="text"],
+input[type="email"] {
+  min-inline-size: 0;
+  padding: 0.5rem;
+  outline-offset: 0.25rem;
+  font-size: 1rem;
+}
+
+.signup-button {
+  margin-block-start: 2rem;
+  inline-size: 8rem;
+  padding: 0.5rem 1rem;
+  outline-offset: 0.25rem;
+  grid-area: signup;
+  justify-self: center;
+  font-size: 1rem;
+  cursor: pointer;
+}

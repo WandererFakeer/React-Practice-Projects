@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-size: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wotfard", sans-serif;
+}
+
+:root {
+  --shadow-color: 286deg 36% 48%;
+  --body-background: oklch(89.698% 0.07061 317.781);
+  --profile-card-background-color: oklch(1 0 0);
+  --join-date-color: oklch(37.15% 0.00004 271.152);
+  --badges-outline-color: oklch(86.765% 0.00108 12.127);
+  --badge-background-color: oklch(89.143% 0.0001 271.152);
+  --golden-badges-outline-color: oklch(88.282% 0.18104 94.468);
+  --golden-badge-background-color: oklch(94.48% 0.06527 98.053);
+}
+
+body {
+  background-color: var(--body-background);
+}
+
+main {
+  inline-size: min(
+    100% - clamp(1rem, 0.9492rem + 1.3559vw, 2rem),
+    400 / 16 * 1rem
+  );
+  margin: 3rem auto;
+}
+
+ul {
+  list-style-type: "";
+}
+
+.profiles {
+  display: grid;
+  justify-self: center;
+  gap: 3.5rem;
+  text-align: center;
+}
+
+.profile-card {
+  --space: clamp(0.5rem, 0.4746rem + 0.678vw, 1rem);
+  background-color: var(--profile-card-background-color);
+  padding: 0 var(--space) var(--space) var(--space);
+  border-radius: 6rem 6rem 1rem 1rem;
+  display: grid;
+  gap: 2rem;
+  box-shadow:
+    0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.69),
+    3.7px 7.4px 7.3px hsl(var(--shadow-color) / 0.49),
+    31.3px 62.5px 61.9px hsl(var(--shadow-color) / 0.22);
+}
+
+.profile-picture {
+  inline-size: 14rem;
+  max-inline-size: 100%;
+  margin: -1.5rem auto 1.5rem;
+  outline: 5px solid var(--profile-card-background-color);
+  border-radius: 2rem 2rem 4rem 4rem;
+  display: block;
+}
+
+.name {
+  margin-block-end: 0.5rem;
+  overflow-wrap: break-word;
+}
+
+.join-date {
+  color: var(--join-date-color);
+}
+
+.badges {
+  outline: 2px dashed var(--badges-outline-color);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(0.25rem, 0.2119rem + 1.0169vw, 1rem);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.badge {
+  background-color: var(--badge-background-color);
+  padding: clamp(0.25rem, 0.2246rem + 0.678vw, 0.75rem)
+    clamp(0.25rem, 0.2119rem + 1.0169vw, 1rem);
+  border-radius: 0.25rem;
+}
+
+.golden {
+  outline-color: var(--golden-badges-outline-color);
+}
+
+.golden > .badge {
+  background-color: var(--golden-badge-background-color);
+}

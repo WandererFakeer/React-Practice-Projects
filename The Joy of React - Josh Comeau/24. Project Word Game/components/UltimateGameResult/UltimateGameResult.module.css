@@ -1,0 +1,21 @@
+.banner {
+  inline-size: min(100%, 500 / 16 * 1rem);
+  align-self: end;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  color: oklch(100% 0.00011 271.152);
+  text-align: center;
+  position: absolute;
+  inset-block-end: 0.5rem;
+  inset-inline-start: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.happy {
+  background-color: oklch(0.543 0.0991 152.77);
+}
+
+.sad {
+  background-color: oklch(0.5119 0.1657 27.39);
+}

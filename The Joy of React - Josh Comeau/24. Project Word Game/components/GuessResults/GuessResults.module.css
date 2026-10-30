@@ -1,0 +1,7 @@
+.game-board {
+  inline-size: 100%;
+  list-style-type: "";
+  align-self: start;
+  display: grid;
+  gap: 0.5rem;
+}

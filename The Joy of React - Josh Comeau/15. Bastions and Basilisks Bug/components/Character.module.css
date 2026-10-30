@@ -1,0 +1,30 @@
+.wizard {
+  inline-size: 7rem;
+  display: block;
+}
+
+.level {
+  background-color: oklch(52.265% 0.10373 78.163);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem 1px;
+  color: oklch(1 0 0);
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  border-block-end: 4px solid hsl(40deg 90% 10%);
+  border-inline: 3px solid hsl(40deg 90% 20%);
+  transition: background-color 750ms;
+}
+
+.level:is(:hover, :focus-visible) {
+  background-color: oklch(40.03% 0.07813 79.243);
+  transition: background-color 500ms;
+}
+
+.message {
+  padding-inline: 0.5em;
+  color: oklch(35.233% 0.00004 271.152);
+  font-weight: 550;
+  line-height: 1.5;
+}

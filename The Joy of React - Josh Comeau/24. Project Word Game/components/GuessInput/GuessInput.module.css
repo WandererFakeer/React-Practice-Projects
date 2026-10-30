@@ -1,0 +1,19 @@
+.guess-input-wrapper {
+  align-self: end;
+  display: grid;
+  gap: 0.5rem;
+  position: relative;
+}
+
+label {
+  font-size: 1.125rem;
+}
+
+input[type="text"] {
+  min-inline-size: 0;
+  border: 2px solid oklch(35.233% 0.00004 271.152);
+  padding: 1.05rem 1rem;
+  border-radius: 0.25rem;
+  outline-offset: 4px;
+  font-size: 1.35rem;
+}

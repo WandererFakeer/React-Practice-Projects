@@ -1,0 +1,29 @@
+figure {
+  background-color: oklch(34.398% 0.03311 291.782);
+  margin-block-end: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+video {
+  inline-size: 100%;
+  margin-block-end: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.speed-control {
+  margin-block-end: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+select {
+  padding-inline: 0.25rem;
+  font-size: 1rem;
+}

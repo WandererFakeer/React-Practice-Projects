@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  block-size: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  inline-size: min(100% - 2rem, 650 / 16 * 1rem);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar-button {
+  background-color: oklch(1 0 0);
+  inline-size: 6rem;
+  aspect-ratio: 1;
+  border: 2px solid oklch(0 0 0);
+  border-radius: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.avatar-button:is(:hover, :focus-visible) {
+  border-style: dashed;
+  border-color: oklch(72.828% 0.19712 351.97);
+}
+
+.avatar {
+  inline-size: 100%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  display: block;
+  transition: transform 500ms;
+}
+
+.avatar-button:is(:hover, :focus-visible) .avatar {
+  transform: rotate(-25deg);
+  transition: transform 250ms;
+}

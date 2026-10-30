@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  block-size: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  inline-size: min(100% - 2rem, 400 / 16 * 1rem);
+  display: grid;
+  justify-items: center;
+  gap: 2em;
+}

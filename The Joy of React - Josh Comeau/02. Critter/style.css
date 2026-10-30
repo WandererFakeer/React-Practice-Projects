@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-size: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wotfard", sans-serif;
+}
+
+body {
+  background-color: oklch(0.8197 0.0983 299.52);
+  block-size: 100dvh;
+  display: grid;
+  place-items: center;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+main {
+  background-color: oklch(1 0 0);
+  inline-size: min(100% - 2rem, 500 / 16 * 1rem);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 5px oklch(0.7374 0.1153 299.88);
+}
+
+header {
+  background-color: oklch(91.612% 0.00145 285.294);
+  padding: 0.5rem;
+  border-start-start-radius: 1rem;
+  border-start-end-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.625rem, 0.6053rem + 0.5263vw, 1rem);
+  align-items: center;
+}
+
+.avatar {
+  inline-size: min(100%, 8rem);
+  aspect-ratio: 1;
+  margin-block-start: -3.5rem;
+  border-radius: 100%;
+}
+
+.handle {
+  color: inherit;
+  font-size: clamp(1.125rem, 1.0921rem + 0.8772vw, 1.75rem);
+  font-weight: 500;
+  text-box: trim-both cap alphabetic;
+  text-decoration: none;
+}
+
+p {
+  border-block-end: 1px solid oklch(0.9 0 0);
+  padding: clamp(0.5rem, 0.4211rem + 2.1053vw, 2rem);
+  font-size: clamp(1.25rem, 1.2105rem + 1.0526vw, 2rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+footer {
+  padding: clamp(0.5rem, 0.4605rem + 1.0526vw, 1.25rem)
+    clamp(0.5rem, 0.4211rem + 2.1053vw, 2rem);
+  border-end-start-radius: 1rem;
+  border-end-end-radius: 1rem;
+  color: oklch(0.5 0.0265 300.91);
+  font-size: clamp(0.875rem, 0.8553rem + 0.5263vw, 1.25rem);
+  font-weight: 500;
+}

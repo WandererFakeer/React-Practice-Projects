@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-size: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wotfard", sans-serif;
+}
+
+body {
+  background: oklch(92.481% 0.04328 301.627);
+}
+
+main {
+  inline-size: min(
+    100% - clamp(1rem, 0.9492rem + 1.3559vw, 2rem),
+    400 / 16 * 1rem
+  );
+  margin: 2rem auto;
+}
+
+.friends {
+  list-style-type: "";
+  display: grid;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.friend {
+  background-color: oklch(1 0 0);
+  padding: clamp(0.5rem, 0.4619rem + 1.0169vw, 1.25rem);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 1px 1px 0.5rem oklch(49.819% 0.13688 296.872);
+}
+
+.green-dot {
+  background-color: green;
+  inline-size: 0.75rem;
+  block-size: 0.75rem;
+  border: 2px solid oklch(100% 0.00011 271.152);
+  border-radius: 100%;
+  box-shadow:
+    0px 1px 2px oklch(0% 0 0 / 0.2),
+    0px 2px 4px oklch(0% 0 0 / 0.1),
+    0px 4px 8px oklch(0% 0 0 / 0.05),
+    0px 8px 16px oklch(0% 0 0 / 0.05);
+}

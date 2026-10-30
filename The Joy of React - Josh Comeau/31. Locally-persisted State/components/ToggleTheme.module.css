@@ -1,0 +1,61 @@
+main {
+  block-size: 100%;
+  display: grid;
+  place-items: center;
+}
+
+form {
+  inline-size: min(100% - 1rem, 300 / 16 * 1rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 450;
+}
+
+.toggle {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle::before {
+  background-color: var(--ball-color);
+  content: "";
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  outline: 2px solid var(--ball-outline);
+  border-radius: 50%;
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0.5rem;
+  transform: translateY(-50%);
+  box-shadow: 1px 1px 3px oklch(0% 0 0 / 0.6);
+  overflow: hidden;
+}
+
+.toggle::after {
+  background-color: var(--track-color);
+  content: "";
+  inline-size: 5rem;
+  block-size: 0.5rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.toggle:checked::before {
+  inset-inline-start: 4.25rem;
+  box-shadow: -1px 1px 3px oklch(0% 0 0 / 0.6);
+}
+
+.toggle:focus-visible {
+  outline: 2px auto hsl(345deg 100% 50%);
+  outline-offset: 2px;
+}

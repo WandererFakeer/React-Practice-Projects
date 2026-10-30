@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-size: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wotfard", sans-serif;
+}
+
+main {
+  inline-size: min(100% - 2rem, 750 / 16 * 1rem);
+  margin: 2rem auto;
+  display: grid;
+  gap: 2.5rem;
+}
+
+section {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+
+table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  border-block-end: 3px solid oklch(37.15% 0.00004 271.152);
+}
+
+.product-description:not(:last-of-type) {
+  border-block-end: 1px solid oklch(59.987% 0.00007 271.152);
+}
+
+td {
+  padding-block: 0.5rem;
+}
+
+.product-image-container {
+  inline-size: 10rem;
+  overflow: hidden;
+}
+
+.product-image {
+  background: transparent;
+  inline-size: 100%;
+  display: block;
+}
+
+.checkout-action-button {
+  border: 1px solid oklch(37.15% 0.00004 271.152);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  outline-offset: 3px;
+  justify-self: end;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.checkout-action-button:is(:hover, :focus-visible) {
+  background-color: oklch(0 0 0);
+  color: oklch(1 0 0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .checkout-action-button {
+    transition:
+      background-color 700ms,
+      color 750ms;
+  }
+
+  .checkout-action-button:is(:hover, :focus-visible) {
+    transition:
+      background-color 500ms,
+      color 500ms;
+  }
+}

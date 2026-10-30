@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-size: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Wotfard", sans-serif;
+}
+
+main {
+  inline-size: min(100% - 1rem, 500 / 16 * 1rem);
+  margin: 2rem auto;
+}
+
+.art-wrapper {
+  margin-block-end: 0.75rem;
+  border: 3px solid;
+  border-radius: 0.25rem;
+}
+
+svg {
+  inline-size: 100%;
+  margin-inline: auto;
+  display: block;
+}
+
+fieldset {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.col {
+  min-inline-size: 10rem;
+  flex: 1;
+}
+
+.control-heading {
+  margin-block-end: 0.5rem;
+  display: block;
+  font-size: 1.125rem;
+}
+
+:where(input[type="range"], select) {
+  inline-size: 100%;
+  display: block;
+}
+
+select {
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
+.radio-wrapper {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-inline-size: calc(440 / 16 * 1rem)) {
+  .row {
+    flex-direction: column;
+  }
+}

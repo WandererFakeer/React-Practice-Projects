@@ -1,0 +1,10 @@
+.calculate {
+  background-color: transparent;
+  border: 1px solid oklch(76.439% 0.00111 12.884);
+  padding: 0.75em;
+  border-radius: 0.15rem;
+  display: grid;
+  place-self: center;
+  font-size: 1rem;
+  cursor: pointer;
+}

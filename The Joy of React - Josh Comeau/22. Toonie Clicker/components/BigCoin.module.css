@@ -1,0 +1,23 @@
+.coin-wrapper {
+  background-color: transparent;
+  inline-size: min(100%, 13rem);
+  border: none;
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 500ms;
+}
+
+.coin-wrapper:is(:hover, :focus-visible) {
+  transform: scale(1.05);
+  transition: transform 200ms;
+}
+.coin-wrapper:active {
+  transform: scale(0.95);
+  transition: transform 0ms;
+}
+
+.coin {
+  inline-size: 100%;
+  aspect-ratio: 1;
+  display: block;
+}

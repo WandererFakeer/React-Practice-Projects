@@ -1,0 +1,17 @@
+{
+  "name": "24.-project-word-game",
+  "version": "1.0.0",
+  "description": "In this project, we'll recreate a popular online word game, Wordle:",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "parcel": "^2.16.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

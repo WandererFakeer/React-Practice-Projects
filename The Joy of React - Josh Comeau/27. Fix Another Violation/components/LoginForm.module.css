@@ -1,0 +1,34 @@
+.login-form {
+  background-color: oklch(1 0 0);
+  border-block-end: 3px solid oklch(39.191% 0.2582 269.455 / 0.35);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.input-wrapper {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  font-size: 1.1rem;
+}
+
+input {
+  min-inline-size: 0;
+  padding: 0.5rem;
+  outline-offset: 3px;
+  font-size: 1rem;
+}
+
+.login-button {
+  inline-size: min(100%, 8rem);
+  margin-block-start: 1rem;
+  padding: 0.75rem;
+  outline-offset: 3px;
+  justify-self: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+}

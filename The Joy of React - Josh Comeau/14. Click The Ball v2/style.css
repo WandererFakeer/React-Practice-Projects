@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes moveBall {
+  0% {
+    transform: translate(9.5rem, 2.5rem);
+  }
+
+  10% {
+    transform: translate(0.6rem, 14rem);
+  }
+
+  16% {
+    transform: translate(3.25rem, 8rem);
+  }
+
+  25% {
+    transform: translate(15rem, 1.25rem);
+  }
+
+  30% {
+    transform: translate(13rem, 0rem);
+  }
+
+  39% {
+    transform: translate(1.25rem, 15rem);
+  }
+
+  50% {
+    transform: translate(9.5rem, 9.5rem);
+  }
+
+  60% {
+    transform: translate(14rem, 10rem);
+  }
+
+  62% {
+    transform: translate(15rem, 9.5rem);
+  }
+
+  64.5% {
+    transform: translate(14.5rem, 8.5rem);
+  }
+
+  70% {
+    transform: translate(0rem, 0rem);
+  }
+
+  76% {
+    transform: translate(6.25rem, 6.25rem);
+  }
+
+  82% {
+    transform: translate(12.5rem, 0rem);
+  }
+
+  90% {
+    transform: translate(6.25rem, 16rem);
+  }
+
+  100% {
+    transform: translate(9.5rem, 3.5rem);
+  }
+}
+
+@keyframes moveBomb {
+  0% {
+    transform: translate(0rem, 9.5rem);
+  }
+
+  5% {
+    transform: translate(10rem, 1.75rem);
+  }
+
+  12% {
+    transform: translate(11.75rem, 8rem);
+  }
+
+  25% {
+    transform: translate(0rem, 2.5rem);
+  }
+
+  28% {
+    transform: translate(1.25rem, 1.25rem);
+  }
+
+  40% {
+    transform: translate(12.5rem, 15rem);
+  }
+
+  47% {
+    transform: translate(6.25rem, 12.5rem);
+  }
+
+  50% {
+    transform: translate(3rem, 13.75rem);
+  }
+
+  64% {
+    transform: translate(-3rem, 0rem);
+  }
+
+  68% {
+    transform: translate(2.5rem, 2rem);
+  }
+
+  76% {
+    transform: translate(-1.75rem, 12.5rem);
+  }
+
+  84.5% {
+    transform: translate(13rem, 7.5rem);
+  }
+
+  93% {
+    transform: translate(1.75rem, 15rem);
+  }
+
+  100% {
+    transform: translate(0rem, 9.5rem);
+  }
+}
+
+body {
+  background-color: oklch(16.755% 0.0071 258.413);
+  block-size: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  inline-size: 80svh;
+  block-size: 80dvh;
+  outline: 2px solid oklch(100% 0.00011 271.152 / 0.5);
+  border-radius: 1px;
+  position: relative;
+}
+
+:where(.ball, .bomb) {
+  inline-size: 3.25rem;
+  block-size: 3.25rem;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  will-change: transform;
+  position: absolute;
+  inset-block-start: 0;
+}
+
+.ball {
+  background: oklch(64.437% 0.24872 11.353);
+  inset-inline-start: 0;
+}
+
+.ball::after {
+  background-color: oklch(100% 0.00011 271.152 / 0.9);
+  content: "";
+  inline-size: 40%;
+  block-size: 15%;
+  border-radius: 100%;
+  position: absolute;
+  inset-block-start: 25%;
+  inset-inline-start: 10%;
+  transform: rotate(-30deg);
+  filter: blur(3px);
+  mix-blend-mode: overlay;
+}
+
+.bomb {
+  background-color: transparent;
+  font-size: 3rem;
+  inset-inline-start: 3rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ball {
+    animation: moveBall 15000ms ease-in-out infinite alternate;
+  }
+
+  .bomb {
+    animation: moveBomb 12345ms ease-in-out infinite alternate;
+  }
+}

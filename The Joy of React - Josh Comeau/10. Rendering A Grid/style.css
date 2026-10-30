@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --spacing: 0.5rem;
+}
+
+body {
+  background-color: oklch(16.755% 0.0071 258.413);
+}
+
+main {
+  inline-size: min(100% - 2rem, 600 / 16 * 1rem);
+  margin: 1rem auto;
+}
+
+.container {
+  background-color: oklch(100% 0.00011 271.152);
+  inline-size: 100%;
+  block-size: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: var(--spacing);
+}
+
+.row {
+  inline-size: 100%;
+  display: flex;
+  gap: var(--spacing);
+}
+
+.column {
+  aspect-ratio: 1 / 1;
+  border: 1px solid oklch(76.168% 0.01717 245.285);
+  border-radius: 0.25rem;
+  flex: 1;
+}
+
+.column:hover {
+  background-color: oklch(84.054% 0.01784 248.167);
+}

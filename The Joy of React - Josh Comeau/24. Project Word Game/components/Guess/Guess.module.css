@@ -1,0 +1,42 @@
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.column {
+  block-size: 3.5rem;
+  outline: 2px solid oklch(0.7794 0 0);
+  flex: 1;
+  display: grid;
+  place-items: center;
+  color: oklch(1 0 0);
+  font-size: 2rem;
+}
+
+.row:first-of-type > .column:first-of-type {
+  border-start-start-radius: 0.25rem;
+}
+
+.row:first-of-type > .column:nth-of-type(5) {
+  border-start-end-radius: 0.25rem;
+}
+
+.row:last-of-type > .column:first-of-type {
+  border-end-start-radius: 0.25rem;
+}
+
+.row:last-of-type > .column:nth-of-type(5) {
+  border-end-end-radius: 0.25rem;
+}
+
+.correct {
+  background-color: oklch(0.5007 0.1151 154.9);
+}
+
+.misplaced {
+  background-color: oklch(0.567392 0.116554 95.256);
+}
+
+.incorrect {
+  background-color: oklch(0.3442 0.0017 106.49);
+}

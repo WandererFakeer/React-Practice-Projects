@@ -1,0 +1,42 @@
+.wrapper {
+  inline-size: min(
+    100% - clamp(1rem, 0.9492rem + 1.3559vw, 2rem),
+    400 / 16 * 1rem
+  );
+  margin-block-start: 2rem;
+  margin-inline: auto;
+  border-inline-start: 3px solid;
+  padding: 1.5rem clamp(1rem, 0.9492rem + 1.3559vw, 2rem);
+  border-radius: 0.25rem;
+  display: grid;
+  gap: 1rem;
+  word-break: break-all;
+}
+
+.notice {
+  background-color: oklch(61.293% 0.17537 267.156 / 0.1);
+  border-inline-start-color: oklch(50.607% 0.27888 273.695);
+}
+
+.warning {
+  background-color: oklch(78.741% 0.17146 69.116 / 0.1);
+  border-inline-start-color: oklch(73.188% 0.18576 52.974);
+}
+
+.error {
+  background-color: oklch(55.869% 0.2216 13.938 / 0.1);
+  border-inline-start-color: oklch(65.574% 0.22934 6.843);
+}
+
+.success {
+  background-color: oklch(74.605% 0.16759 160.461 / 0.1);
+  border-inline-start-color: oklch(74.605% 0.16759 160.461);
+}
+
+.heading {
+  font-weight: 550;
+}
+
+.example {
+  font-size: 1.1rem;
+}

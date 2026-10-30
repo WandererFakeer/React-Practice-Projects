@@ -1,0 +1,41 @@
+.panel-wrapper {
+  background-color: oklch(1 0 0);
+  inline-size: min(100% - 1em, 450 / 16 * 1rem);
+  padding: clamp(1rem, 0.8983rem + 2.7119vw, 3rem)
+    clamp(1rem, 0.9492rem + 1.3559vw, 2rem);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-elevation-high);
+}
+
+.panel {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  color: oklch(42.024% 0.00005 271.152);
+  font-size: clamp(0.875rem, 0.8623rem + 0.339vw, 1.125rem);
+  font-weight: 400;
+  text-box: trim-both cap alphabetic;
+}
+
+.count {
+  margin-block-end: 2rem;
+  color: oklch(42.952% 0.24496 279.912);
+  font-size: clamp(1.125rem, 0.9534rem + 4.5763vw, 4.5rem);
+  font-weight: 600;
+  text-box: trim-both cap alphabetic;
+}
+
+.buttons-wrapper {
+  list-style-type: "";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.buttons-wrapper > li {
+  flex: 1;
+}
