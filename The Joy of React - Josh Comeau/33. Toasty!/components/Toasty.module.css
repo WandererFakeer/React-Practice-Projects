@@ -1,0 +1,22 @@
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.ghost-wrapper {
+  position: relative;
+  pointer-events: none;
+}
+
+.ghost-character {
+  font-size: 14rem;
+  position: absolute;
+  inset-block-end: -3rem;
+  inset-inline-end: 0;
+  animation: slide-in 500ms ease-in-out;
+}

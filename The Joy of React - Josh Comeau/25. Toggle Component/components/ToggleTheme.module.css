@@ -34,9 +34,9 @@ label {
   outline: 2px solid var(--ball-outline);
   border-radius: 50%;
   position: absolute;
-  inset-block-start: 50%;
+  inset-block-start: 55%;
   inset-inline-start: 0.5rem;
-  transform: translateY(-50%);
+  transform: translateY(-55%);
   box-shadow: 1px 1px 3px oklch(0% 0 0 / 0.6);
   overflow: hidden;
 }

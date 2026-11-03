@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("assets/font/wotfard-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-size: normal;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: oklch(91.302% 0.02854 285.776);
+  padding: 1rem;
+}
+
+main {
+  inline-size: min(100% - 1rem, 560 / 16 * 1rem);
+  margin: 3rem auto;
+  display: grid;
+  gap: 3rem;
+}
+
+article {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.about-section {
+  display: grid;
+  gap: 2rem;
+}
+
+.origin-section {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.heading {
+  font-family: "Wotfard", sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.25rem, 1.1992rem + 1.3559vw, 2.25rem);
+}
+
+h2 {
+  font-size: clamp(1.125rem, 1.0805rem + 1.1864vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 0.9746rem + 0.678vw, 1.5rem);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.last-paragraph {
+  margin-block: 1rem;
+}
+
+a {
+  display: block;
+  color: oklch(23.066% 0.15987 264.073);
+  font-size: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+}
