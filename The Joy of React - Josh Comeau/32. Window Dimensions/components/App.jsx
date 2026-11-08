@@ -15,6 +15,12 @@ function App() {
     }
 
     window.addEventListener("resize", handleDimensions);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleDimensions);
+    };
+
   }, []);
 
   return (

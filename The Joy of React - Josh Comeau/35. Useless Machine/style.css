@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: oklch(90.541% 0.15458 194.807);
+  block-size: 100dvh;
+}
+
+.root {
+  inline-size: min(100% - 1rem, 350 / 16 * 1rem);
+  block-size: 100%;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+}
+
+input[type="checkbox"] {
+  transform: scale(10);
+  cursor: pointer;
+}

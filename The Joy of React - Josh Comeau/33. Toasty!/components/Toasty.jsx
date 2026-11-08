@@ -15,6 +15,12 @@ function Toasty() {
     });
 
     observer.observe(ghostRef.current);
+
+    // Cleanup function
+    return () => {
+      observer.disconnect();
+    };
+  
   }, []);
 
   return (
