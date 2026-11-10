@@ -38,6 +38,7 @@
   aspect-ratio: 1;
   border: none;
   border-radius: 100%;
+  outline-offset: 5px;
   display: grid;
   place-items: center;
   color: oklch(100% 0.00011 271.152);

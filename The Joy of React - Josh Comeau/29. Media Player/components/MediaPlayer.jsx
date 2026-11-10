@@ -11,13 +11,25 @@ function MediaPlayer({ albumCover, src, audioName, audioAuthor }) {
 
   const [isPlaying, setIsPlaying] = React.useState(false);
 
-  function handleAction() {
-    const nextPlay = !isPlaying;
+  // Audio play / pause logic
+  React.useEffect(() => {
+    isPlaying ? mediaRef.current.play() : mediaRef.current.pause();
+  }, [isPlaying]);
 
-    nextPlay ? mediaRef.current.play() : mediaRef.current.pause();
+  React.useEffect(() => {
+    function handleKeyboard(event) {
+      if (event.code === "Space") {
+        event.preventDefault();
+        setIsPlaying((currentValue) => !currentValue);
+      }
+    }
 
-    setIsPlaying(nextPlay);
-  }
+    window.addEventListener("keydown", handleKeyboard);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyboard);
+    };
+  }, []);
 
   return (
     <article className={styles["media-player"]}>
@@ -30,7 +42,12 @@ function MediaPlayer({ albumCover, src, audioName, audioAuthor }) {
 
       <audio src={src} ref={mediaRef} onEnded={() => setIsPlaying(false)} />
 
-      <button className={styles["media-action"]} onClick={handleAction}>
+      <button
+        className={styles["media-action"]}
+        onClick={() => {
+          setIsPlaying((currentValue) => !currentValue);
+        }}
+      >
         {isPlaying ? <Pause /> : <Play />}
         <VisuallyHidden>Toggle playing</VisuallyHidden>
       </button>
