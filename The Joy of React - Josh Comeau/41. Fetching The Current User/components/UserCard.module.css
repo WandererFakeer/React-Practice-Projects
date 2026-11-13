@@ -1,0 +1,16 @@
+.card-wrapper {
+  background-color: oklch(100% 0.00011 271.152);
+  outline: 2px dashed oklch(75.357% 0.14647 298.16);
+  padding: 2rem;
+  outline-offset: -4px;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  color: oklch(0% 0 0);
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 500;
+}

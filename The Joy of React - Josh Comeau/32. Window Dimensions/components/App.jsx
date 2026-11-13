@@ -1,27 +1,9 @@
 import React from "react";
 
+import useResize from "../hooks/useResize.jsx";
+
 function App() {
-  const [dimensions, setDimensions] = React.useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  React.useEffect(() => {
-    function handleDimensions() {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    window.addEventListener("resize", handleDimensions);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener("resize", handleDimensions);
-    };
-
-  }, []);
+  const dimensions = useResize();
 
   return (
     <p>
